@@ -1,6 +1,6 @@
 # Express GeoIP
 
-Express 4 middleware to add req.countryCode, which is the ISO alpha 2 country code for a request.
+Express 4 middleware to add req.countryCode, which is the ISO alpha 2 country code mtaching req.ip, to requests.
 
 ## Usage
 
