@@ -1,0 +1,21 @@
+{
+  "name": "express-geoip",
+  "version": "1.0.0",
+  "description": "Adds the ISO country code of the request to req.countryCode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Mike MacCana",
+    "email": "mike.maccana@gmail.com"
+  },
+  "license": "MIT",
+  "repository": "mikemaccana/express-geoip",
+  "readme": "# Express GeoIP\n\nExpress 4 middleware to add req.countryCode, which is the ISO alpha 2 country code for a request.\n\n## Usage\n\nIn `app.js`\n\n\tvar expressGeoIP = require('express-geoip');\n\n\tapp.use(expressGeoIP('US'));\n\n",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "es6-shim": "^0.32.0",
+    "geoip-lite": "^1.1.6"
+  }
+}
