@@ -3,11 +3,10 @@ var geoip = require('geoip-lite');
 require('es6-shim');
 
 module.exports = function(defaultCountryCode){
-	return function getCountryCode(req, res, next) {
+	var getCountryCode = function(ip){
 		// IPV6 addresses can include IPV4 addresses
 		// So req.ip can be '::ffff:86.3.182.58'
 		// However geoip-lite returns null for these
-		var ip = req.ip
 		if ( ip.includes('::ffff:') ) {
 			ip = ip.split(':').reverse()[0]
 		}
@@ -19,7 +18,16 @@ module.exports = function(defaultCountryCode){
 		if ( ( ip === '127.0.0.1' ) || ( ! lookedUpIP ) ) {
 			countryCode = defaultCountryCode
 		}
-		req.countryCode = countryCode
+		return countryCode
+	}
+
+	var getCountryCodeMiddleware = function(req, res, next) {
+		req.countryCode = getCountryCode(req.ip)
 		next();
+	}
+
+	return {
+		getCountryCodeMiddleware: getCountryCodeMiddleware,
+		getCountryCode: getCountryCode,
 	}
 }

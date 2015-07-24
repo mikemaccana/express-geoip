@@ -1,21 +1,73 @@
 {
-  "name": "express-geoip",
-  "version": "1.0.0",
-  "description": "Adds the ISO country code of the request to req.countryCode",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_args": [
+    [
+      "express-geoip@^1.2.0",
+      "/Users/mike/Documents/certsimple"
+    ]
+  ],
+  "_from": "express-geoip@>=1.0.0 <2.0.0",
+  "_id": "express-geoip@1.0.0",
+  "_inCache": true,
+  "_location": "/express-geoip",
+  "_nodeVersion": "0.12.0",
+  "_npmUser": {
+    "email": "mike.maccana@gmail.com",
+    "name": "mikemaccana"
   },
+  "_npmVersion": "2.5.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "express-geoip",
+    "raw": "express-geoip@^1.0.0",
+    "rawSpec": "^1.0.0",
+    "scope": null,
+    "spec": ">=1.0.0 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/express-geoip/-/express-geoip-1.0.0.tgz",
+  "_shasum": "649031271c021e50810407d67d8cddf108775d5e",
+  "_shrinkwrap": null,
+  "_spec": "express-geoip@^1.0.0",
+  "_where": "/Users/mike/Documents/certsimple",
   "author": {
-    "name": "Mike MacCana",
-    "email": "mike.maccana@gmail.com"
+    "email": "mike.maccana@gmail.com",
+    "name": "Mike MacCana"
   },
-  "license": "MIT",
-  "repository": "mikemaccana/express-geoip",
-  "readme": "# Express GeoIP\n\nExpress 4 middleware to add req.countryCode, which is the ISO alpha 2 country code for a request.\n\n## Usage\n\nIn `app.js`\n\n\tvar expressGeoIP = require('express-geoip');\n\n\tapp.use(expressGeoIP('US'));\n\n",
-  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/mikemaccana/express-geoip/issues"
+  },
   "dependencies": {
     "es6-shim": "^0.32.0",
     "geoip-lite": "^1.1.6"
-  }
+  },
+  "description": "Adds the ISO country code of the request to req.countryCode",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "649031271c021e50810407d67d8cddf108775d5e",
+    "tarball": "http://registry.npmjs.org/express-geoip/-/express-geoip-1.0.0.tgz"
+  },
+  "gitHead": "214bba8f4b1467ac12689519df9935c3eccde8d2",
+  "homepage": "https://github.com/mikemaccana/express-geoip",
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "mikemaccana",
+      "email": "mike.maccana@gmail.com"
+    }
+  ],
+  "name": "express-geoip",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikemaccana/express-geoip"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
