@@ -22,7 +22,8 @@ module.exports = function(defaultCountryCode){
 	}
 
 	var getCountryCodeMiddleware = function(req, res, next) {
-		req.countryCode = getCountryCode(req.ip)
+		var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+		req.countryCode = getCountryCode(ip)
 		next();
 	}
 

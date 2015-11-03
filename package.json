@@ -5,8 +5,8 @@
       "/Users/mike/Documents/certsimple"
     ]
   ],
-  "_from": "express-geoip@>=1.0.0 <2.0.0",
-  "_id": "express-geoip@1.0.0",
+  "_from": "express-geoip@1.2.0",
+  "_id": "express-geoip@1.2.0",
   "_inCache": true,
   "_location": "/express-geoip",
   "_nodeVersion": "0.12.0",
@@ -28,13 +28,13 @@
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/express-geoip/-/express-geoip-1.0.0.tgz",
-  "_shasum": "649031271c021e50810407d67d8cddf108775d5e",
+  "_shasum": "b2cfc12da3ec0625ec151e5ec83934662d77ae46",
   "_shrinkwrap": null,
   "_spec": "express-geoip@^1.0.0",
   "_where": "/Users/mike/Documents/certsimple",
   "author": {
-    "email": "mike.maccana@gmail.com",
-    "name": "Mike MacCana"
+    "name": "Mike MacCana",
+    "email": "mike.maccana@gmail.com"
   },
   "bugs": {
     "url": "https://github.com/mikemaccana/express-geoip/issues"
@@ -64,10 +64,12 @@
   "optionalDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikemaccana/express-geoip"
+    "url": "git+https://github.com/mikemaccana/express-geoip.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "version": "1.2.0"
+  "version": "2.0.0",
+  "readme": "# Express GeoIP\n\nExpress 4 middleware to add req.countryCode, which is the ISO alpha 2 country code for a request.\n\n## Usage\n\nIn `app.js`\n\n\tvar expressGeoIP = require('express-geoip');\n\n\tapp.use(expressGeoIP('US').getCountryCodeMiddleware);\n\nThen, in your routes, check `req.countryCode` for the looked up country code.\n\n## History\n\n1.2.0 - Added tests, new function signature\n\n1.0.0 - Initial release\n",
+  "readmeFilename": "README.md"
 }

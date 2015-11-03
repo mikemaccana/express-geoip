@@ -13,10 +13,9 @@ var US_IP = '108.60.143.242'
 var AU_IP = '139.130.4.5'
 
 suite('geoips', function(){
-	this.timeout(5 * 1000);
 	test('correctly handles US and AU addresses', function(){
-		assert(geoIP.getCountryCode(US_IP), 'US')
-		assert(geoIP.getCountryCode('139.130.4.5'), 'AU')
+		assert.equal(geoIP.getCountryCode(US_IP), 'US')
+		assert.equal(geoIP.getCountryCode(AU_IP), 'AU')
 	});
 });
 
