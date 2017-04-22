@@ -40,7 +40,6 @@
     "url": "https://github.com/mikemaccana/express-geoip/issues"
   },
   "dependencies": {
-    "es6-shim": "^0.32.0",
     "geoip-lite": "^1.1.6"
   },
   "description": "Adds the ISO country code of the request to req.countryCode",

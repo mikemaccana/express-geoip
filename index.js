@@ -1,7 +1,5 @@
 var geoip = require('geoip-lite');
 
-require('es6-shim');
-
 module.exports = function(defaultCountryCode){
 	var getCountryCode = function(ip){
 		// IPV6 addresses can include IPV4 addresses
@@ -29,7 +27,7 @@ module.exports = function(defaultCountryCode){
 	}
 
 	return {
-		getCountryCodeMiddleware: getCountryCodeMiddleware,
-		getCountryCode: getCountryCode,
+		getCountryCodeMiddleware,
+		getCountryCode,
 	}
 }
