@@ -68,7 +68,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "version": "2.0.0",
+  "version": "2.2.0",
   "readme": "# Express GeoIP\n\nExpress 4 middleware to add req.countryCode, which is the ISO alpha 2 country code for a request.\n\n## Usage\n\nIn `app.js`\n\n\tvar expressGeoIP = require('express-geoip');\n\n\tapp.use(expressGeoIP('US').getCountryCodeMiddleware);\n\nThen, in your routes, check `req.countryCode` for the looked up country code.\n\n## History\n\n1.2.0 - Added tests, new function signature\n\n1.0.0 - Initial release\n",
   "readmeFilename": "README.md"
 }
