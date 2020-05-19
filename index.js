@@ -19,8 +19,15 @@ module.exports = function(defaultCountryCode){
 		return countryCode
 	}
 
+	var getXForwardedFor = function(req) {
+		const ips = (req.headers['x-forwarded-for'] || '').split(',')
+		const ip = ips[0] ? ips[0].trim() : ''
+
+		return ip.replace(/:\d+$/, '')
+	}
+
 	var getCountryCodeMiddleware = function(req, res, next) {
-		var xForwardedFor = (req.headers['x-forwarded-for'] || '').replace(/:\d+$/, '');
+		var xForwardedFor = getXForwardedFor(req);
 		var ip = xForwardedFor || req.connection.remoteAddress;
 		req.countryCode = getCountryCode(ip)
 		next();
