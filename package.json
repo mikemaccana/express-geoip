@@ -10,7 +10,9 @@
     "geoip-lite": "^1.3.4"
   },
   "description": "Adds the ISO country code of the request to req.countryCode",
-  "devDependencies": {},
+  "devDependencies": {
+    "simple-mock": "^0.8.0"
+  },
   "directories": {},
   "dist": {
     "shasum": "649031271c021e50810407d67d8cddf108775d5e",
